@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99BFF02120E7CC230048E8F8 /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BFF01F20E7CC230048E8F8 /* OCViewController.m */; };
 		EF59235520E7CA89000EA742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59235420E7CA89000EA742 /* AppDelegate.swift */; };
 		EF59235720E7CA89000EA742 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59235620E7CA89000EA742 /* ViewController.swift */; };
 		EF59235A20E7CA89000EA742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF59235820E7CA89000EA742 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99BFF01920E7CBFA0048E8F8 /* M4AnimationCore-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "M4AnimationCore-Bridging-Header.h"; sourceTree = "<group>"; };
+		99BFF01F20E7CC230048E8F8 /* OCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		99BFF02020E7CC230048E8F8 /* OCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
 		EF59235120E7CA89000EA742 /* M4AnimationCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M4AnimationCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF59235420E7CA89000EA742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF59235620E7CA89000EA742 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99BFF01D20E7CC230048E8F8 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Swift;
+			path = Src/Swift;
+			sourceTree = "<group>";
+		};
+		99BFF01E20E7CC230048E8F8 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				99BFF02020E7CC230048E8F8 /* OCViewController.h */,
+				99BFF01F20E7CC230048E8F8 /* OCViewController.m */,
+				99BFF02420E7D09D0048E8F8 /* CA */,
+				99BFF02220E7D09D0048E8F8 /* Core */,
+				99BFF02320E7D09D0048E8F8 /* DisplayLink */,
+			);
+			name = OC;
+			path = Src/OC;
+			sourceTree = "<group>";
+		};
+		99BFF02220E7D09D0048E8F8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		99BFF02320E7D09D0048E8F8 /* DisplayLink */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DisplayLink;
+			sourceTree = "<group>";
+		};
+		99BFF02420E7D09D0048E8F8 /* CA */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CA;
+			sourceTree = "<group>";
+		};
 		EF59234820E7CA89000EA742 = {
 			isa = PBXGroup;
 			children = (
@@ -57,9 +103,12 @@
 				EF59235420E7CA89000EA742 /* AppDelegate.swift */,
 				EF59235620E7CA89000EA742 /* ViewController.swift */,
 				EF59235820E7CA89000EA742 /* Main.storyboard */,
+				99BFF01E20E7CC230048E8F8 /* OC */,
+				99BFF01D20E7CC230048E8F8 /* Swift */,
 				EF59235B20E7CA89000EA742 /* Assets.xcassets */,
 				EF59235D20E7CA89000EA742 /* LaunchScreen.storyboard */,
 				EF59236020E7CA89000EA742 /* Info.plist */,
+				99BFF01920E7CBFA0048E8F8 /* M4AnimationCore-Bridging-Header.h */,
 			);
 			path = M4AnimationCore;
 			sourceTree = "<group>";
@@ -96,6 +145,7 @@
 				TargetAttributes = {
 					EF59235020E7CA89000EA742 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +188,7 @@
 			files = (
 				EF59235720E7CA89000EA742 /* ViewController.swift in Sources */,
 				EF59235520E7CA89000EA742 /* AppDelegate.swift in Sources */,
+				99BFF02120E7CC230048E8F8 /* OCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +325,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = M4AnimationCore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.chenms.M4AnimationCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "M4AnimationCore/M4AnimationCore-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,11 +342,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = M4AnimationCore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.chenms.M4AnimationCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "M4AnimationCore/M4AnimationCore-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
