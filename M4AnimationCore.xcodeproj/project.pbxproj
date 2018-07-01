@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		99BFF02120E7CC230048E8F8 /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BFF01F20E7CC230048E8F8 /* OCViewController.m */; };
+		99BFF02720E7D1830048E8F8 /* M4AnimaView_CA_Explicit_OC.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BFF02620E7D1830048E8F8 /* M4AnimaView_CA_Explicit_OC.m */; };
+		99BFF02A20E8FD8A0048E8F8 /* M4AnimaView_CA_Implicit_OC.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BFF02920E8FD8A0048E8F8 /* M4AnimaView_CA_Implicit_OC.m */; };
 		EF59235520E7CA89000EA742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59235420E7CA89000EA742 /* AppDelegate.swift */; };
 		EF59235720E7CA89000EA742 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59235620E7CA89000EA742 /* ViewController.swift */; };
 		EF59235A20E7CA89000EA742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF59235820E7CA89000EA742 /* Main.storyboard */; };
@@ -19,6 +21,10 @@
 		99BFF01920E7CBFA0048E8F8 /* M4AnimationCore-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "M4AnimationCore-Bridging-Header.h"; sourceTree = "<group>"; };
 		99BFF01F20E7CC230048E8F8 /* OCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
 		99BFF02020E7CC230048E8F8 /* OCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		99BFF02520E7D1830048E8F8 /* M4AnimaView_CA_Explicit_OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M4AnimaView_CA_Explicit_OC.h; sourceTree = "<group>"; };
+		99BFF02620E7D1830048E8F8 /* M4AnimaView_CA_Explicit_OC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M4AnimaView_CA_Explicit_OC.m; sourceTree = "<group>"; };
+		99BFF02820E8FD8A0048E8F8 /* M4AnimaView_CA_Implicit_OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M4AnimaView_CA_Implicit_OC.h; sourceTree = "<group>"; };
+		99BFF02920E8FD8A0048E8F8 /* M4AnimaView_CA_Implicit_OC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M4AnimaView_CA_Implicit_OC.m; sourceTree = "<group>"; };
 		EF59235120E7CA89000EA742 /* M4AnimationCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M4AnimationCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF59235420E7CA89000EA742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF59235620E7CA89000EA742 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +83,10 @@
 		99BFF02420E7D09D0048E8F8 /* CA */ = {
 			isa = PBXGroup;
 			children = (
+				99BFF02520E7D1830048E8F8 /* M4AnimaView_CA_Explicit_OC.h */,
+				99BFF02620E7D1830048E8F8 /* M4AnimaView_CA_Explicit_OC.m */,
+				99BFF02820E8FD8A0048E8F8 /* M4AnimaView_CA_Implicit_OC.h */,
+				99BFF02920E8FD8A0048E8F8 /* M4AnimaView_CA_Implicit_OC.m */,
 			);
 			path = CA;
 			sourceTree = "<group>";
@@ -186,8 +196,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99BFF02720E7D1830048E8F8 /* M4AnimaView_CA_Explicit_OC.m in Sources */,
 				EF59235720E7CA89000EA742 /* ViewController.swift in Sources */,
 				EF59235520E7CA89000EA742 /* AppDelegate.swift in Sources */,
+				99BFF02A20E8FD8A0048E8F8 /* M4AnimaView_CA_Implicit_OC.m in Sources */,
 				99BFF02120E7CC230048E8F8 /* OCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
