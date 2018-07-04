@@ -9,10 +9,12 @@
 #import "OCViewController.h"
 #import "M4AnimaView_CA_Explicit_OC.h"
 #import "M4AnimaView_CA_Implicit_OC.h"
+#import "M4AnimaView_DL_OC.h"
 
 @interface OCViewController ()
 @property (nonatomic) M4AnimaView_CA_Explicit_OC *caView;
 @property (nonatomic) M4AnimaView_CA_Implicit_OC *caImplicitView;
+@property (nonatomic) M4AnimaView_DL_OC *dlView;
 @end
 
 @implementation OCViewController
@@ -54,6 +56,28 @@
     [caImplicitReset addTarget:self action:@selector(onTapCAResetImplicit) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:caImplicitReset];
     
+    // DisplayLink
+    self.dlView = [[M4AnimaView_DL_OC alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(caImplicitStart.frame) + 20, 200, 60)];
+    [self.view addSubview:self.dlView];
+    
+    UIButton *dlStart = [UIButton buttonWithType:UIButtonTypeSystem];
+    dlStart.frame = CGRectMake(CGRectGetMinX(self.dlView.frame), CGRectGetMaxY(self.dlView.frame) + 10, 100, 40);
+    [dlStart setTitle:@"DL-Start" forState:UIControlStateNormal];
+    [dlStart addTarget:self action:@selector(onTapDLStart) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:dlStart];
+    
+    UIButton *dlReset = [UIButton buttonWithType:UIButtonTypeSystem];
+    dlReset.frame = CGRectMake(CGRectGetMaxX(dlStart.frame) + 20, CGRectGetMaxY(self.dlView.frame) + 10, 100, 40);
+    [dlReset setTitle:@"DL-Reset" forState:UIControlStateNormal];
+    [dlReset addTarget:self action:@selector(onTapDLReset) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:dlReset];
+    
+    UIButton *dlClean = [UIButton buttonWithType:UIButtonTypeSystem];
+    dlClean.frame = CGRectMake(CGRectGetMaxX(dlReset.frame) + 20, CGRectGetMaxY(self.dlView.frame) + 10, 100, 40);
+    [dlClean setTitle:@"DL-Clean" forState:UIControlStateNormal];
+    [dlClean addTarget:self action:@selector(onTapDLClean) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:dlClean];
+    
 }
 
 #pragma mark - Event
@@ -71,6 +95,18 @@
 
 - (void)onTapCAResetImplicit {
     [self.caImplicitView reset];
+}
+
+- (void)onTapDLStart {
+    [self.dlView start];
+}
+
+- (void)onTapDLReset {
+    [self.dlView reset];
+}
+
+- (void)onTapDLClean {
+    [self.dlView clean];
 }
 
 @end

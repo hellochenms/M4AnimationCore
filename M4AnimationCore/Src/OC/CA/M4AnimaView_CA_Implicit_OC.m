@@ -88,7 +88,7 @@
     
     CGContextAddPath(ctx, path.CGPath);
     CGContextSetLineWidth(ctx, 5);
-    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
     CGContextStrokePath(ctx);
 }
 
