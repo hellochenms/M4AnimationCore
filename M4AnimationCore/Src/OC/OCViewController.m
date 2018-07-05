@@ -10,11 +10,13 @@
 #import "M4AnimaView_CA_Explicit_OC.h"
 #import "M4AnimaView_CA_Implicit_OC.h"
 #import "M4AnimaView_DL_OC.h"
+#import "M4AnimaView_Core.h"
 
 @interface OCViewController ()
 @property (nonatomic) M4AnimaView_CA_Explicit_OC *caView;
 @property (nonatomic) M4AnimaView_CA_Implicit_OC *caImplicitView;
 @property (nonatomic) M4AnimaView_DL_OC *dlView;
+@property (nonatomic) M4AnimaView_Core *coreView;
 @end
 
 @implementation OCViewController
@@ -78,6 +80,21 @@
     [dlClean addTarget:self action:@selector(onTapDLClean) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:dlClean];
     
+    // Custom Core
+    self.coreView = [[M4AnimaView_Core alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(dlStart.frame) + 20, 200, 60)];
+    [self.view addSubview:self.coreView];
+    
+    UIButton *coreStart = [UIButton buttonWithType:UIButtonTypeSystem];
+    coreStart.frame = CGRectMake(CGRectGetMinX(self.coreView.frame), CGRectGetMaxY(self.coreView.frame) + 10, 100, 40);
+    [coreStart setTitle:@"Core-Start" forState:UIControlStateNormal];
+    [coreStart addTarget:self action:@selector(onTapCoreStart) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:coreStart];
+    
+    UIButton *coreReset = [UIButton buttonWithType:UIButtonTypeSystem];
+    coreReset.frame = CGRectMake(CGRectGetMaxX(coreStart.frame) + 20, CGRectGetMaxY(self.coreView.frame) + 10, 100, 40);
+    [coreReset setTitle:@"Core-Reset" forState:UIControlStateNormal];
+    [coreReset addTarget:self action:@selector(onTapCoreReset) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:coreReset];
 }
 
 #pragma mark - Event
@@ -108,5 +125,14 @@
 - (void)onTapDLClean {
     [self.dlView clean];
 }
+
+- (void)onTapCoreStart {
+    [self.coreView start];
+}
+
+- (void)onTapCoreReset {
+    [self.coreView reset];
+}
+
 
 @end
